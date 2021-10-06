@@ -1,1 +1,15 @@
-[![Work in MakeCode](https://classroom.github.com/assets/work-in-make-code-c53f0c86300af1a64cdd5dc830e2509efd17c8cb483a722cacaee84d10eb8ec9.svg)](https://classroom.github.com/online_ide?assignment_repo_id=5817043&assignment_repo_type=AssignmentRepo)
+# Chemical_waste
+
+
+## Team Members
+1 Aman Yousuf Mohammed
+- amoham96@uic.edu
+
+2 Deep Diganvker
+- ddigan2@uic.edu 
+
+## Description
+Our database will track the differents types of chemical waste that is mishandled by industries that is harming the environment. We will keep track of what industries are dumping which types of chemicals into the environment. The database will show the leading industries and which specific chemical they mishandle the most. 
+ 
+ ## GitHub Repository
+ - https://github.com/CS480UIC/cs480-final-project-chemical_waste
