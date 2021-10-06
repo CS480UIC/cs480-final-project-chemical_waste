@@ -9,7 +9,7 @@
 - ddigan2@uic.edu 
 
 ## Description
-Our database will track the differents types of chemical waste that is mishandled by industries that is harming the environment. We will keep track of what industries are dumping which types of chemicals into the environment. The database will show the leading industries and which specific chemical they mishandle the most. 
+Our database will track the differents types of chemical waste that are mishandled by industries that are harming the environment. We will keep track of what industries are dumping which types of chemicals into the environment. The database will show the leading industries and which specific chemical they mishandle the most. 
  
  ## GitHub Repository
  - https://github.com/CS480UIC/cs480-final-project-chemical_waste
