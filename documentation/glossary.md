@@ -43,6 +43,23 @@ Envirnment can have many chemicals but the chemical have only one ID
 Envirnment have many counties but each country have one name
 - singular
 
+Entity name: Industry
+Synonyms: Business, Production
+Description: An industry is an embodiemnt of companies that work to produce the same good or service.
+
+Entity name: Chemical
+Synonym: Toxins, waste
+Description: A chemical is anythiing that is the by product of the industy that harms the environment.
+
+Entity name: Environment
+Synonym: Habitat, nature
+Description: An environment is anything that is receiving the effects of the chemicals. It can range from rivers to oceans to forrest.
+
+Entity name: Epa
+Synonym: Agency
+Description: The Epa is an agency that sets restrictions on industries on their by product waste. All the chemicals that leave a certain industry go on to harm the environment.
+
+
 ### ER Diagram : 
 
 ![ER DIAGRAM 480](https://user-images.githubusercontent.com/90651416/136299329-3b5d614c-2ff4-4490-8620-7361fc37deb0.png)
