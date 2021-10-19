@@ -62,4 +62,4 @@ Description: The Epa is an agency that sets restrictions on industries on their 
 
 ### ER Diagram : 
 
-![ER DIAGRAM 480](https://user-images.githubusercontent.com/90651416/136299329-3b5d614c-2ff4-4490-8620-7361fc37deb0.png)
+![ER DIAGRAM 480](![image](https://user-images.githubusercontent.com/56059115/137837529-9140aba0-d2b0-4792-a9c2-f0ebf0d784c6.png)
