@@ -78,6 +78,31 @@ login_saves_register
 **Login**
 epa_reports_login
 
+### Supertypes, Subtypes and Partitions
+No use on project
+
+### Cascade/Restrict Dependency Relationships
+
+**industry_produces_chemicals**
+Delete Cascade
+
+**epa_regulates_industry**
+Delete Cascade
+
+**industry_follows_epa**
+Delete Cascade
+
+**chemical_pollutes_environment**
+Delete Cascade
+
+**login_saves_register**
+Delete Cascade
+
+**epa_reports_login**
+Delete Cascade
+
+**Cascade/Restrict Foreign Keys**
+Delete Cascade Username
 
 ### ER Diagram : 
 
