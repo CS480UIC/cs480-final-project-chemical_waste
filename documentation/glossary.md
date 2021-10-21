@@ -64,7 +64,7 @@ Description: The Epa is an agency that sets restrictions on industries on their 
 industry_produces_chemicals
 
 **Industy**
-epa_regulates_chemicals
+epa_regulates_industry
 
 **Environment**
 chemical_pollutes_environment
