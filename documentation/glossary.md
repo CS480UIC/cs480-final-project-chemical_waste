@@ -78,6 +78,32 @@ login_saves_register
 **Login**
 epa_reports_login
 
+### Attribute Types
+**Industry**
+type VARCHAR(30)
+location VARCHAR(10)
+
+**Chemical**
+type VARCHAR(30)
+name VARCHAR(30)
+quatity SMALLINT
+
+**Environment**
+chemicalid INTEGER
+envtype VARCHAR(30)
+
+**EPA**
+chemicalname VARCHAR(30)
+envtype VARCHAR(30)
+
+**Login**
+password VARCHAR(50)
+
+**Register**
+email VARCHAR(30)
+password VARCHAR(50)
+phone SMALLINT
+
 ### Supertypes, Subtypes and Partitions
 No use on project
 
