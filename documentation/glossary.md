@@ -66,9 +66,17 @@ industry_produces_chemicals
 **Industy**
 epa_regulates_industry
 
+**EPA**
+industry_follows_epa
+
 **Environment**
 chemical_pollutes_environment
 
+**Register**
+login_saves_register
+
+**Login**
+epa_reports_login
 
 
 ### ER Diagram : 
