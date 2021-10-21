@@ -59,6 +59,17 @@ Entity name: Epa
 Synonym: Agency
 Description: The Epa is an agency that sets restrictions on industries on their by product waste. All the chemicals that leave a certain industry go on to harm the environment.
 
+#### Dependent Entities and Dependency Relationships
+**Chemical**
+industry_produces_chemicals
+
+**Industy**
+epa_regulates_chemicals
+
+**Environment**
+chemical_pollutes_environment
+
+
 
 ### ER Diagram : 
 
