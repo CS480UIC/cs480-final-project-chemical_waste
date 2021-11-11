@@ -43,4 +43,3 @@ FROM EPA
 INNER JOIN industry
 ON EPA.id = industry.id;
 
-
