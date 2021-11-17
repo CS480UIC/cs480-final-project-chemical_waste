@@ -21,12 +21,12 @@ public class UserDao {
 	/**
 	 * user name to connect to the database 
 	 */
-	private String MySQL_user = "test";  //TODO change user
+	private String MySQL_user = "man";  //TODO change user
 	
 	/**
 	 * password of your username to connect to the database
 	 */
-	private String MySQL_password = "12345678";  //TODO change password
+	private String MySQL_password = "man123";  //TODO change password
 	
 	/**
 	 * get the Search result with Username 
@@ -36,7 +36,7 @@ public class UserDao {
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", "chemicalwaste", "1998");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/chemical_waste", "root", "Amanyousuf1998");
 		    String sql = "select * from user where username=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,username);
@@ -67,7 +67,7 @@ public class UserDao {
 	public void add(User user) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore",  "chemicalwaste", "1998");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/chemical_waste",  "root", "Amanyousuf1998");
 			
 			String sql = "insert into user values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -86,7 +86,7 @@ public class UserDao {
 		List<Object> list = new ArrayList<>();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/chemical_waste", "root", "Amanyousuf1998");
 			String sql = "select * from user";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
