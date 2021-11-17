@@ -24,7 +24,7 @@ public class InitializeDao {
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/chemical_waste", "root", "Amanyousuf1998");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/chemical_waste", "root", "2022UiC!!");
 		   
 			statement=connect.createStatement();
 			statement.executeUpdate("DROP TABLE IF EXISTS chemical");

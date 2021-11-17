@@ -6,7 +6,7 @@
     <description></description>
     <display-name>InitServlet</display-name>
     <servlet-name>InitServlet</servlet-name>
-    <servlet-class>entity1.web.servlet.InitServlet</servlet-class>
+    <servlet-class>user.web.servlet.InitServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>InitServlet</servlet-name>
