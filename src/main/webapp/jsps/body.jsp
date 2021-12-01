@@ -22,7 +22,10 @@
   </head>
   
   <body>
-    <h1>Our database will track the differents types of chemical waste that are mishandled by industries that are harming the environment. We will keep track of what industries are dumping which types of chemicals into the environment. The database will show the leading industries and which specific chemical they mishandle the most.EPA (environment protection agency) will have some restriction on the industries regarding the chemicals being dumped.</h1>
+    <h1>Our database will track the differents types of chemical waste that are mishandled by industries that 
+    are harming the environment. We will keep track of what industries are dumping which types of chemicals into the environment. 
+    The database will show the leading industries and which specific chemical they mishandle the most.EPA (environment protection agency) 
+    will have some restriction on the industries regarding the chemicals being dumped.</h1>
     <h4 style="color:blue;">Team Members:</h4>
     <p>1.Aman Yousuf Mohammed</br>
        2.Deep Diganvker</p>

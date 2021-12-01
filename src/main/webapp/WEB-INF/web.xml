@@ -12,7 +12,7 @@
     <servlet-name>InitServlet</servlet-name>
     <url-pattern>/InitServlet</url-pattern>
   </servlet-mapping>
-    <servlet>
+ 	<servlet>
     <description></description>
     <display-name>Entity1ServletCreate</display-name>
     <servlet-name>Entity1ServletCreate</servlet-name>
@@ -22,7 +22,16 @@
     <servlet-name>Entity1ServletCreate</servlet-name>
     <url-pattern>/Entity1ServletCreate</url-pattern>
   </servlet-mapping>
-  
+    <servlet>
+    <description></description>
+    <display-name>IndustryServletCreate</display-name>
+    <servlet-name>IndustryServletCreate</servlet-name>
+    <servlet-class>industry.web.servlet.IndustryServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndustryServletCreate</servlet-name>
+    <url-pattern>/IndustryServletCreate</url-pattern>
+  </servlet-mapping>
   <servlet>
     <description></description>
     <display-name>Entity1ServletRead</display-name>

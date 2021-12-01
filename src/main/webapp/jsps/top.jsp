@@ -44,7 +44,7 @@
 		</c:when>
 		<c:otherwise>
 			Hello：${sessionScope.session_user.username };
-			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
+			<!-- <a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp; -->
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
 			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/chemical/menu.jsp'/>" target="body">CHEMICAL</a> |&nbsp;&nbsp;
@@ -52,6 +52,7 @@
 			<a href="<c:url value='/jsps/EPO/menu.jsp'/>" target="body">EPO</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/Environment/menu.jsp'/>" target="body">ENVIRONMENT</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/user/initialize.jsp'/>" target="_parent">Initialize Database</a> |&nbsp; 
 			
 		</c:otherwise>
 	</c:choose>

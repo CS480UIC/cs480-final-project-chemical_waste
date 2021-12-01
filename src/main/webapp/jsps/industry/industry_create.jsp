@@ -22,12 +22,12 @@
   
   <body>
   <h1>Industry Details:</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	IndustryID:<input type="text" name="ID" value="${form.ID }" required/>
-	<span style="color: red; font-weight: 900">${errors.ID }</span>
+<form action="<c:url value='/IndustryServletCreate'/>" method="post">
+	IndustryID:<input type="text" name="ID" value="${form.id }" required/>
+	<span style="color: red; font-weight: 900">${errors.id }</span>
 	<br/>
-	Industry's Type：<input type="text" name="i-type" value="${form.i-type }" required/>
-	<span style="color: red; font-weight: 900">${errors.i-type }</span>
+	Industry's Type：<input type="text" name="i-type" value="${form.type }" required/>
+	<span style="color: red; font-weight: 900">${errors.type }</span>
 	<br/>
 	Location：<input type="text" name="location" value="${form.location }" required/>
 	<span style="color: red; font-weight: 900">${errors.location }</span>
