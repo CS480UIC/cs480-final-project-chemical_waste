@@ -36,7 +36,7 @@ public class InitializeDao {
 							+ "quantity VARCHAR(20)) ";
 			statement.executeUpdate(sqlsmt);
 			
-			  PreparedStatement preparedStatement = connect.prepareStatement("insert into chemical (id,type,name,quantity)values(2, 'toxic', 'mercury', '2kgs')");
+			  PreparedStatement preparedStatement = connect.prepareStatement("insert into chemical (id,type,name,quantity)values(?,?,?,?)");
 					
 //					preparedStatement.setString(1,"toxic,mercury,2kgs ");
 //					preparedStatement.setString(31,"toxic,mercury,2kgs ");

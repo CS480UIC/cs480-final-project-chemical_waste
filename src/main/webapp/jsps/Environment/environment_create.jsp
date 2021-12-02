@@ -22,14 +22,14 @@
   
   <body>
   <h1>Environment Details</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	ChemicalID:<input type="text" name="ID" value="${form.ID }" />
-	<span style="color: red; font-weight: 900">${errors.ID }</span>
+<form action="<c:url value='/EnvironmentServletCreate'/>" method="post">
+	ChemicalID:<input type="text" name="ID" value="${form.chem_id }" required/>
+	<span style="color: red; font-weight: 900">${errors.chem_id }</span>
 	<br/>
-	Location Type：<input type="text" name="l-type" value="${form.l-type }" />
-	<span style="color: red; font-weight: 900">${errors.l-type }</span>
+	Location Type：<input type="text" name="l-type" value="${form.env_type }" required/>
+	<span style="color: red; font-weight: 900">${errors.env_type }</span>
 	<br/>
-	Location：<input type="text" name="location" value="${form.location }"/>
+	Location：<input type="text" name="location" value="${form.location }" required/>
 	<span style="color: red; font-weight: 900">${errors.location }</span>
 	<br/>
 	

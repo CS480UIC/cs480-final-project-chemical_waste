@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import chemical.domain.Entity1;
-import chemical.service.Entity1Exception;
-import chemical.service.Entity1Service;
+import chemical.domain.Chemical;
+import chemical.service.ChemicalException;
+import chemical.service.ChemicalService;
 
 
 /**
@@ -41,7 +41,7 @@ public class ChemicalServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ChemicalService chemicalservice = new ChemicalService();
+		ChemicalService entity1service = new ChemicalService();
 		Map<String,String[]> paramMap = request.getParameterMap();
 		Chemical form = new Chemical();
 		List<String> info = new ArrayList<String>();
@@ -50,16 +50,16 @@ public class ChemicalServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setID(info.get(0));
-		form.setc-type(info.get(1));
-		form.setLocation(info.get(2));		
-		form.setquantity(info.get(3));
-
+		form.setId(Integer.parseInt(info.get(0)));
+		form.setType(info.get(1));
+		form.setName(info.get(2));
+		form.setQuantity(info.get(3));
+		
 		try {
-			chemicalservice.create(form);
+			entity1service.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException |ChemicalException e) {
+		} catch (ClassNotFoundException | ChemicalException e) {
 			e.printStackTrace();
 		} catch (InstantiationException e) {
 			e.printStackTrace();

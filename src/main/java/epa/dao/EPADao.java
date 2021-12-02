@@ -1,4 +1,4 @@
-package entity1.dao;
+package epa.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,18 +6,19 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import epa.domain.EPA;
+
 
 
 
 //import java.util.ArrayList;
 //import java.util.List;
 
-import entity1.domain.Entity1;
 
 /**
  * DDL functions performed in database
  */
-public class Entity1Dao {
+public class EPADao {
 	
 	/**
 	 * user name to connect to the database 
@@ -29,8 +30,8 @@ public class Entity1Dao {
 	 */
 	private String MySQL_password = "2022UiC!!"; //TODO change password
 
-	public Entity1 findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Entity1 entity1 = new Entity1();
+	public EPA findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		EPA entity1 = new EPA();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/chemical_waste", "root", "2022UiC!!");
@@ -42,9 +43,9 @@ public class Entity1Dao {
 		    while(resultSet.next()){
 		    	String user_name = resultSet.getString("username");
 		    	if(user_name.equals(username)){
-		    		entity1.setUsername(resultSet.getString("username"));
-		    		entity1.setPassword(resultSet.getString("password"));
-		    		entity1.setEmail(resultSet.getString("email"));		
+		    		entity1.setInd_id(Integer.parseInt(resultSet.getString("username")));
+		    		entity1.setEnvType(resultSet.getString("password"));
+		    		entity1.setChemName(resultSet.getString("email"));		
 		    	}
 		    }
 		    connect.close();
@@ -62,16 +63,16 @@ public class Entity1Dao {
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(EPA form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/chemical_waste", MySQL_user, MySQL_password);
 			
 			String sql = "insert into entity1 values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getUsername());
-		    preparestatement.setString(2,form.getPassword());
-		    preparestatement.setString(3,form.getEmail());
+		    preparestatement.setInt(1,form.getInd_id());
+		    preparestatement.setString(2,form.getEnvType());
+		    preparestatement.setString(3,form.getChemName());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -86,16 +87,16 @@ public class Entity1Dao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void update(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(EPA form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/chemical_waste", MySQL_user, MySQL_password);
 			
 			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+		    preparestatement.setInt(1,form.getInd_id());
+			preparestatement.setString(2,form.getEnvType());
+		    preparestatement.setString(3,form.getChemName());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

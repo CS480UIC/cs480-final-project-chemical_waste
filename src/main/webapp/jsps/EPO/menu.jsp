@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for Entity1 </h1>
+    <h1>CRUD operations for EPA </h1>
     <br>
-	<a href="<c:url value='/jsps/EPO/epo_create.jsp'/>" target="_parent">Create epo</a> |&nbsp; 
-	<a href="<c:url value='/jsps/EPO/epo_read.jsp'/>" target="_parent">Read epo</a> |&nbsp;
-	<a href="<c:url value='/jsps/EPO/epo_update.jsp'/>" target="_parent">Update epo</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/EPO/epo_delete.jsp'/>" target="_parent">Delete epo</a>	
+	<a href="<c:url value='/jsps/EPO/epo_create.jsp'/>" target="_parent">Create epa</a> |&nbsp; 
+	<a href="<c:url value='/jsps/EPO/epo_read.jsp'/>" target="_parent">Read epa</a> |&nbsp;
+	<a href="<c:url value='/jsps/EPO/epo_update.jsp'/>" target="_parent">Update epa</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/EPO/epo_delete.jsp'/>" target="_parent">Delete epa</a>	
 	    
   </body>
 </html>

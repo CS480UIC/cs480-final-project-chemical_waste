@@ -32,7 +32,7 @@
 	Location：<input type="text" name="location" value="${form.location }" required/>
 	<span style="color: red; font-weight: 900">${errors.location }</span>
 	<br/>
-	<input type="submit" value="Create Entity1"/>
+	<input type="submit" value="Create"/>
 </form>
   </body>
 </html>
