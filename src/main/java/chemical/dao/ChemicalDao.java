@@ -63,7 +63,7 @@ public class ChemicalDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/chemical_waste", MySQL_user, MySQL_password);
 			
-			String sql = "insert into Chemical values(?,?,?,?)";
+			String sql = "insert into chemical values(?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getId());
 		    preparestatement.setString(2,form.getType());

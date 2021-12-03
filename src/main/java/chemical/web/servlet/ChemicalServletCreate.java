@@ -41,7 +41,7 @@ public class ChemicalServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ChemicalService entity1service = new ChemicalService();
+		ChemicalService chemservice = new ChemicalService();
 		Map<String,String[]> paramMap = request.getParameterMap();
 		Chemical form = new Chemical();
 		List<String> info = new ArrayList<String>();
@@ -56,7 +56,7 @@ public class ChemicalServletCreate extends HttpServlet {
 		form.setQuantity(info.get(3));
 		
 		try {
-			entity1service.create(form);
+			chemservice.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
 		} catch (ClassNotFoundException | ChemicalException e) {

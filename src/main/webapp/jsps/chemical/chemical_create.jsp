@@ -23,7 +23,7 @@
   <body>
   
   <h1>ADD Chemical Details</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/ChemicalServletCreate'/>" method="post">
 	ID:<input type="text" name="ID" value="${form.ID }" />
 	<span style="color: red; font-weight: 900">${errors.ID }</span>
 	<br/>

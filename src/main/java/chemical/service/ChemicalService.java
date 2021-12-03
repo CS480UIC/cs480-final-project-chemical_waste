@@ -21,8 +21,8 @@ public class ChemicalService {
 	 */
 	public void create(Chemical form) throws ChemicalException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
-		Chemical entity1 = chemicalDao.findById(form.getId());
-		if(entity1.getId()!=null && entity1.getId().equals(form.getId())) throw new ChemicalException("This user name has been registered!");
+		Chemical chem = chemicalDao.findById(form.getId());
+		if(chem.getId()!=null && chem.getId().equals(form.getId())) throw new ChemicalException("This user name has been registered!");
 		chemicalDao.add(form);
 	}
 	/**

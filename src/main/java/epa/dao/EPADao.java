@@ -35,17 +35,17 @@ public class EPADao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/chemical_waste", "root", "2022UiC!!");
-		    String sql = "select * from entity1 where username=?";
+		    String sql = "select * from epa where username=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,username);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	String user_name = resultSet.getString("username");
+		    	String user_name = resultSet.getString("chemical_name");
 		    	if(user_name.equals(username)){
-		    		entity1.setInd_id(Integer.parseInt(resultSet.getString("username")));
-		    		entity1.setEnvType(resultSet.getString("password"));
-		    		entity1.setChemName(resultSet.getString("email"));		
+		    		entity1.setInd_id(Integer.parseInt(resultSet.getString("industry_id")));
+		    		entity1.setEnvType(resultSet.getString("e_type"));
+		    		entity1.setChemName(resultSet.getString("chemical_name"));		
 		    	}
 		    }
 		    connect.close();
@@ -68,7 +68,7 @@ public class EPADao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/chemical_waste", MySQL_user, MySQL_password);
 			
-			String sql = "insert into entity1 values(?,?,?)";
+			String sql = "insert into epa values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getInd_id());
 		    preparestatement.setString(2,form.getEnvType());

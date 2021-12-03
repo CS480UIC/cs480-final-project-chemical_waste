@@ -23,6 +23,7 @@
     <url-pattern>/Entity1ServletCreate</url-pattern>
   </servlet-mapping>
     <servlet>
+    
     <description></description>
     <display-name>IndustryServletCreate</display-name>
     <servlet-name>IndustryServletCreate</servlet-name>
@@ -32,6 +33,40 @@
     <servlet-name>IndustryServletCreate</servlet-name>
     <url-pattern>/IndustryServletCreate</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>EnvironmentServletCreate</display-name>
+    <servlet-name>EnvironmentServletCreate</servlet-name>
+    <servlet-class>environment.web.servlet.EnvironmentServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EnvironmentServletCreate</servlet-name>
+    <url-pattern>/EnvironmentServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ChemicalServletCreate</display-name>
+    <servlet-name>ChemicalServletCreate</servlet-name>
+    <servlet-class>chemical.web.servlet.ChemicalServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChemicalServletCreate</servlet-name>
+    <url-pattern>/ChemicalServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>EPAServletCreate</display-name>
+    <servlet-name>EPAServletCreate</servlet-name>
+    <servlet-class>epa.web.servlet.EPAServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EPAServletCreate</servlet-name>
+    <url-pattern>/EPAServletCreate</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>Entity1ServletRead</display-name>
