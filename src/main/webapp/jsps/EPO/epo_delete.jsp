@@ -22,7 +22,7 @@
   
   <body>
   <h1>Delete</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/EPAServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	EPA Branch:<input type="text" name="branch" value="${form.branch }"/>
 	<span style="color: red; font-weight: 900">${errors.branch }</span>

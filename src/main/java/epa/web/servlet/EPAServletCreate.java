@@ -42,7 +42,7 @@ public class EPAServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		EPAService entity1service = new EPAService();
+		EPAService epaservice = new EPAService();
 		Map<String,String[]> paramMap = request.getParameterMap();
 		EPA form = new EPA();
 		List<String> info = new ArrayList<String>();
@@ -56,7 +56,7 @@ public class EPAServletCreate extends HttpServlet {
 		form.setChemName(info.get(2));		
 		
 		try {
-			entity1service.create(form);
+			epaservice.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
 		} catch (ClassNotFoundException | EPAException e) {

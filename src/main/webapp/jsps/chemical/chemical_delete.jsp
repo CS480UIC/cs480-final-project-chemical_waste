@@ -22,7 +22,7 @@
   
   <body>
   <h1>Delete Chemical</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/ChemicalServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete Chemical  :<input type="text" name="ID" value="${form.ID }"/>
 	<span style="color: red; font-weight: 900">${errors.ID }</span>

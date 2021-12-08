@@ -1,4 +1,4 @@
-package entity1.web.servlet;
+package environment.web.servlet;
 
 import java.io.IOException;
 
@@ -10,19 +10,21 @@ import javax.servlet.http.HttpServletResponse;
 
 import entity1.dao.Entity1Dao;
 import entity1.domain.Entity1;
+import environment.dao.EnvironmentDao;
+import environment.domain.Environment;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletRead extends HttpServlet {
+public class EnvironmentServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletRead() {
+    public EnvironmentServletRead() {
         super();
     }
     
@@ -37,11 +39,11 @@ public class Entity1ServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1 entity1 = null;
-		Entity1Dao entity1Dao = new Entity1Dao();
+		Environment environment = null;
+		EnvironmentDao environmentDao = new EnvironmentDao();
 		
 		try {
-			entity1 = entity1Dao.findByUsername(request.getParameter("username"));
+			environment = environmentDao.findByEnvType(request.getParameter("ID"));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,14 +52,14 @@ public class Entity1ServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(entity1.getUsername()!=null){
-					System.out.println(entity1);
-					request.setAttribute("entity1", entity1);
-					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+		if(environment.getEnv_type()!=null){
+					System.out.println(environment);
+					request.setAttribute("environment", environment);
+					request.getRequestDispatcher("/jsps/environment/environment_read_output.jsp").forward(request, response);
 			}
 			else{
 			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/environment/environment_read_output.jsp").forward(request, response);
 		}
 	}
 }

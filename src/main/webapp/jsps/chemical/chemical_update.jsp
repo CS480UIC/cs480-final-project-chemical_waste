@@ -22,19 +22,19 @@
   
   <body>
   <h1>Update</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/ChemicalServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	ID:<input type="text" name="ID" value="${form.ID }" />
-	<span style="color: red; font-weight: 900">${errors.ID }</span>
+	ID:<input type="text" name="ID" value="${form.Id }" />
+	<span style="color: red; font-weight: 900">${errors.Id }</span>
 	<br/>
-	Chemical's Type：<input type="text" name="c-type" value="${form.c-type }" />
-	<span style="color: red; font-weight: 900">${errors.c-type }</span>
+	Chemical's Type：<input type="text" name="c-type" value="${form.type }" />
+	<span style="color: red; font-weight: 900">${errors.type }</span>
 	<br/>
-	Location：<input type="text" name="location" value="${form.location }" />
-	<span style="color: red; font-weight: 900">${errors.location }</span>
+	Name：<input type="text" name="location" value="${form.name }" />
+	<span style="color: red; font-weight: 900">${errors.name }</span>
 	<br/>
-	Quatity：<input type="text" name="quantity" value="${form.quantity }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Quantity：<input type="text" name="quantity" value="${form.quantity }"/>
+	<span style="color: red; font-weight: 900">${errors.quantity }</span>
 	<br/>
 	<input type="submit" value="UPDATE"/>
 </form>

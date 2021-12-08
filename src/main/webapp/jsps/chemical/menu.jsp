@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for Chemical </h1>
     <br>
-	<a href="<c:url value='/jsps/chemical/chemical_create.jsp'/>" target="_parent">Create Entity1</a> |&nbsp; 
-	<a href="<c:url value='/jsps/chemical/chemical_read.jsp'/>" target="_parent">Read Entity1</a> |&nbsp;
-	<a href="<c:url value='/jsps/chemical/chemical_update.jsp'/>" target="_parent">Update Entity1</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/chemical/chemical_delete.jsp'/>"target="_parent">Delete Entity1 </a>	
+	<a href="<c:url value='/jsps/chemical/chemical_create.jsp'/>" target="_parent">Create Chemical</a> |&nbsp; 
+	<a href="<c:url value='/jsps/chemical/chemical_read.jsp'/>" target="_parent">Read Chemical</a> |&nbsp;
+	<a href="<c:url value='/jsps/chemical/chemical_update.jsp'/>" target="_parent">Update Chemical</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/chemical/chemical_delete.jsp'/>"target="_parent">Delete Chemical </a>	
 	    
   </body>
 </html>

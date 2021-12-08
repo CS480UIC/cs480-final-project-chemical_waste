@@ -22,7 +22,7 @@
   
   <body>
   <h1>Update</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/EPAServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	IndustryID:<input type="text" name="ID" value="${form.ID }" required/>
 	<span style="color: red; font-weight: 900">${errors.ID }</span>

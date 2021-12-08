@@ -1,4 +1,4 @@
-package industry.web.servlet;
+package environment.web.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServletResponse;
 
 import entity1.dao.Entity1Dao;
 import entity1.domain.Entity1;
-import industry.dao.IndustryDao;
-import industry.domain.Industry;
+import environment.dao.EnvironmentDao;
+import environment.domain.Environment;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class IndustryServletDelete extends HttpServlet {
+public class EnvironmentServletDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public IndustryServletDelete() {
+    public EnvironmentServletDelete() {
         super();
     }
     
@@ -38,12 +38,12 @@ public class IndustryServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		IndustryDao industryDao = new IndustryDao();
-		Industry industry = null;
+		EnvironmentDao environmentDao = new EnvironmentDao();
+		Environment environment = null;
 		if(method.equals("search"))
 		{
 			try {
-				industry = industryDao.findById(Integer.parseInt(request.getParameter("ID")));
+				environment = environmentDao.findByEnvType(request.getParameter("ID"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -52,20 +52,20 @@ public class IndustryServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(industry.getId()!=null){
-						System.out.println(industry);
-						request.setAttribute("industry", industry);
-						request.getRequestDispatcher("/jsps/industry/industry_delete_output.jsp").forward(request, response);			
+			if(environment.getEnv_type()!=null){
+						System.out.println(environment);
+						request.setAttribute("environment", environment);
+						request.getRequestDispatcher("/jsps/environment/environment_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "Industry not found");
-				request.getRequestDispatcher("/jsps/industry/industry_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Environment not found");
+				request.getRequestDispatcher("/jsps/environment/environment_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				industryDao.delete(request.getParameter("ID"));
+				environmentDao.delete(request.getParameter("ID"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -73,8 +73,8 @@ public class IndustryServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Industry Deleted");
-			request.getRequestDispatcher("/jsps/industry/industry_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "environment Deleted");
+			request.getRequestDispatcher("/jsps/environment/environment_read_output.jsp").forward(request, response);
 		}
 	}
 }

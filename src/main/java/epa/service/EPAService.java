@@ -9,7 +9,7 @@ import epa.domain.EPA;
  *
  */
 public class EPAService {
-	private EPADao entity1Dao = new EPADao();
+	private EPADao epaDao = new EPADao();
 	
 	/**
 	 * register a Entity1
@@ -20,9 +20,9 @@ public class EPAService {
 	 */
 	public void create(EPA form) throws EPAException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
-		EPA entity1 = entity1Dao.findByUsername(form.getChemName());
+		EPA entity1 = epaDao.findByChemName(form.getChemName());
 		if(entity1.getChemName()!=null && entity1.getChemName().equals(form.getChemName())) throw new EPAException("This user name has been registered!");
-		entity1Dao.add(form);
+		epaDao.add(form);
 	}
 	/**
 	 * Login function

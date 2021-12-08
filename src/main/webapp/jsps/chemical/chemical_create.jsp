@@ -30,11 +30,11 @@
 	Chemical's Type：<input type="text" name="c-type" value="${form.c-type }" />
 	<span style="color: red; font-weight: 900">${errors.c-type }</span>
 	<br/>
-	Location：<input type="text" name="location" value="${form.location }" />
-	<span style="color: red; font-weight: 900">${errors.location }</span>
+	Name：<input type="text" name="location" value="${form.name }" />
+	<span style="color: red; font-weight: 900">${errors.name }</span>
 	<br/>
-	Quatity：<input type="text" name="quantity" value="${form.quantity }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Quantity：<input type="text" name="quantity" value="${form.quantity }"/>
+	<span style="color: red; font-weight: 900">${errors.quantity }</span>
 	<br/>
 	<input type="submit" value="ADD"/>
 </form>

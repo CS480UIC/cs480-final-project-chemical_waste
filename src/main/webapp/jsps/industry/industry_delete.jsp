@@ -22,7 +22,7 @@
   
   <body>
   <h1>Delete Industry</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/IndustryServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete Industry :<input type="text" name="ID" value="${form.ID }"/>
 	<span style="color: red; font-weight: 900">${errors.ID }</span>

@@ -30,12 +30,12 @@ public class EPADao {
 	 */
 	private String MySQL_password = "2022UiC!!"; //TODO change password
 
-	public EPA findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public EPA findByChemName(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		EPA entity1 = new EPA();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/chemical_waste", "root", "2022UiC!!");
-		    String sql = "select * from epa where username=?";
+		    String sql = "select * from epa where chemical_name=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,username);
 		    ResultSet resultSet = preparestatement.executeQuery();
@@ -92,7 +92,7 @@ public class EPADao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/chemical_waste", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE epa SET env_type = ?, industry_id = ? where chemical_name = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getInd_id());
 			preparestatement.setString(2,form.getEnvType());
@@ -116,7 +116,7 @@ public class EPADao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/chemical_waste", MySQL_user, MySQL_password);
 			
-			String sql = "delete from entity1 where username = ?";
+			String sql = "delete from epa where username = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,username);
 		    preparestatement.executeUpdate();

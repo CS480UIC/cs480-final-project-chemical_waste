@@ -23,16 +23,16 @@
   <body>
   <h1>Read Entity1</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/IndustryServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	IndustryID:<input type="text" name="ID" value="${form.ID }" required/>
 	<span style="color: red; font-weight: 900">${errors.ID }</span>
 	<br/>
-	Industry's Type：<input type="text" name="i-type" value="${form.i-type }" required/>
-	<span style="color: red; font-weight: 900">${errors.i-type }</span>
+	<!--Industry's Type：<input type="text" name="i-type" value="${form.type }" required/>
+	<span style="color: red; font-weight: 900">${errors.type }</span>
 	<br/>
 	Location：<input type="text" name="location" value="${form.location }" required/>
-	<span style="color: red; font-weight: 900">${errors.location }</span>
+	<span style="color: red; font-weight: 900">${errors.location }</span> -->
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>

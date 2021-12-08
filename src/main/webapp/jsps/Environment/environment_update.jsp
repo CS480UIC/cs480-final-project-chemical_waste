@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity1</title>
+    <title>Update Entity1</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,20 @@
   </head>
   
   <body>
-  <h1>Delete Entity1</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+  <h1>Update</h1>
+<form action="<c:url value='/EnvironmentServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Location:<input type="text" name="location" value="${form.location }"/>
+	ChemicalID:<input type="text" name="ID" value="${form.ID }" />
+	<span style="color: red; font-weight: 900">${errors.ID }</span>
+	<br/>
+	Location Type：<input type="text" name="l-type" value="${form.l-type }" />
+	<span style="color: red; font-weight: 900">${errors.l-type }</span>
+	<br/>
+	Location：<input type="text" name="location" value="${form.location }" />
 	<span style="color: red; font-weight: 900">${errors.location }</span>
 	<br/>
-	<input type="submit" value="DELETE"/>
+	
+	<input type="submit" value="UPDATE"/>
 </form>
   </body>
 </html>
